@@ -1,0 +1,72 @@
+# Root / Editor
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# IDE & Editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node.js / Frontend
+node_modules/
+.npm/
+.yarn/
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+coverage/
+
+# Python / FastAPI / Django / Flask
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# Go
+bin/
+pkg/
+
+# Java / Spring
+target/
+.gradle/
+build/
+
+# Docker
+docker-compose.override.yml

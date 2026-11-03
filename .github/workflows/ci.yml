@@ -1,0 +1,22 @@
+name: Monorepo CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  verify:
+    name: Verify Monorepo Structure
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Check Directories
+        run: |
+          test -d docs || exit 1
+          test -d backend || exit 1
+          test -d frontend || exit 1
+          echo "Semua direktori monorepo tersedia."

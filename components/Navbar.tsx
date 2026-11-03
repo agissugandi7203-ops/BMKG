@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Volume2, VolumeX, RefreshCw, Radio, ShieldAlert } from 'lucide-react';
+import Link from 'next/link';
+import { Volume2, VolumeX, RefreshCw, Radio, ShieldAlert, Film } from 'lucide-react';
 import { unlockAudioContext } from '@/lib/audio';
 
 interface NavbarProps {
@@ -60,6 +61,15 @@ export function Navbar({
 
         {/* Actions */}
         <div className="flex items-center gap-2 sm:gap-3">
+          {/* Link to Leon Vasari Landing Page */}
+          <Link
+            href="/"
+            className="flex items-center gap-1.5 rounded-lg bg-indigo-950/60 text-indigo-300 border border-indigo-700/50 hover:bg-indigo-900/60 px-3 py-1.5 text-xs font-semibold transition-all shadow-sm"
+          >
+            <Film className="h-3.5 w-3.5 text-indigo-400" />
+            <span className="hidden sm:inline">Leon Vasari Shelf</span>
+          </Link>
+
           {/* Audio Alert Toggle */}
           <button
             onClick={handleAudioClick}
